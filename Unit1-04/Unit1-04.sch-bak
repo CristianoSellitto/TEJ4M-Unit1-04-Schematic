@@ -1,0 +1,293 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 654A7975
+P 1100 2050
+F 0 "SW2" H 1100 2335 50  0000 C CNN
+F 1 "SW_SPDT" H 1100 2244 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_CK-JS102011SAQN" H 1100 2050 50  0001 C CNN
+F 3 "~" H 1100 2050 50  0001 C CNN
+	1    1100 2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 654A8263
+P 1650 1450
+F 0 "R1" V 1850 1400 50  0000 L CNN
+F 1 "1kΩ" V 1750 1377 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 1580 1450 50  0001 C CNN
+F 3 "~" H 1650 1450 50  0001 C CNN
+	1    1650 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 654A9B43
+P 600 2250
+F 0 "BT1" H 708 2296 50  0000 L CNN
+F 1 "5V" H 708 2205 50  0000 L CNN
+F 2 "" V 600 2310 50  0001 C CNN
+F 3 "~" V 600 2310 50  0001 C CNN
+	1    600  2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 654AB618
+P 2000 1450
+F 0 "Q1" H 2191 1496 50  0000 L CNN
+F 1 "BC547" H 2191 1405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2200 1375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 2000 1450 50  0001 L CNN
+	1    2000 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 654AC096
+P 3600 1500
+F 0 "D1" H 3593 1245 50  0000 C CNN
+F 1 "LED" H 3593 1336 50  0000 C CNN
+F 2 "LED_SMD:LED-L1T2_LUMILEDS" H 3600 1500 50  0001 C CNN
+F 3 "~" H 3600 1500 50  0001 C CNN
+	1    3600 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 654B5563
+P 1100 1450
+F 0 "SW1" H 1100 1735 50  0000 C CNN
+F 1 "SW_SPDT" H 1100 1644 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_CK-JS102011SAQN" H 1100 1450 50  0001 C CNN
+F 3 "~" H 1100 1450 50  0001 C CNN
+	1    1100 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1350 600  1350
+Wire Wire Line
+	900  1950 600  1950
+Wire Wire Line
+	900  2450 600  2450
+$Comp
+L Device:R R2
+U 1 1 654BD8F3
+P 1650 2050
+F 0 "R2" V 1850 2000 50  0000 L CNN
+F 1 "1kΩ" V 1750 1977 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 1580 2050 50  0001 C CNN
+F 3 "~" H 1650 2050 50  0001 C CNN
+	1    1650 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1300 1450 1400 1450
+Wire Wire Line
+	1300 2050 1400 2050
+$Comp
+L Device:R R5
+U 1 1 654C44B1
+P 1100 1050
+F 0 "R5" V 1300 1000 50  0000 L CNN
+F 1 "10kΩ" V 1200 950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 1030 1050 50  0001 C CNN
+F 3 "~" H 1100 1050 50  0001 C CNN
+	1    1100 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 654C5033
+P 1100 750
+F 0 "R6" V 1300 700 50  0000 L CNN
+F 1 "220Ω" V 1200 650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 1030 750 50  0001 C CNN
+F 3 "~" H 1100 750 50  0001 C CNN
+	1    1100 750 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	950  1050 600  1050
+Wire Wire Line
+	600  1050 600  1350
+Connection ~ 600  1350
+Wire Wire Line
+	950  750  600  750 
+Wire Wire Line
+	600  750  600  1050
+Connection ~ 600  1050
+$Comp
+L Transistor_BJT:BC547 Q5
+U 1 1 654CC6DB
+P 3350 2050
+F 0 "Q5" H 3541 2096 50  0000 L CNN
+F 1 "BC547" H 3541 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3550 1975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3350 2050 50  0001 L CNN
+	1    3350 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1050 2100 1050
+Wire Wire Line
+	2100 1050 2100 1250
+Wire Wire Line
+	2100 2250 2100 2450
+Wire Wire Line
+	2100 2450 900  2450
+Wire Wire Line
+	900  2150 900  2450
+Connection ~ 600  1950
+Wire Wire Line
+	600  1950 600  2050
+Wire Wire Line
+	600  1350 600  1950
+Wire Wire Line
+	900  1550 900  1950
+Connection ~ 900  2450
+Wire Wire Line
+	1400 1450 1400 1750
+Wire Wire Line
+	1400 1750 1500 1750
+Connection ~ 1400 1450
+Wire Wire Line
+	1400 1450 1500 1450
+Wire Wire Line
+	1400 2050 1400 2350
+Connection ~ 1400 2050
+Wire Wire Line
+	1400 2050 1500 2050
+Wire Wire Line
+	2100 1650 2100 1850
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 654C0EE0
+P 2000 2050
+F 0 "Q2" H 2191 2096 50  0000 L CNN
+F 1 "BC547" H 2191 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2200 1975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 2000 2050 50  0001 L CNN
+	1    2000 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2350 1500 2350
+$Comp
+L Device:R R4
+U 1 1 654D99B4
+P 1650 2350
+F 0 "R4" V 1850 2300 50  0000 L CNN
+F 1 "1kΩ" V 1750 2277 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 1580 2350 50  0001 C CNN
+F 3 "~" H 1650 2350 50  0001 C CNN
+	1    1650 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q4
+U 1 1 654CCB9A
+P 2550 2350
+F 0 "Q4" H 2741 2396 50  0000 L CNN
+F 1 "BC547" H 2741 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2750 2275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 2550 2350 50  0001 L CNN
+	1    2550 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q3
+U 1 1 654CAD08
+P 2450 1750
+F 0 "Q3" H 2641 1796 50  0000 L CNN
+F 1 "BC547" H 2641 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2650 1675 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 2450 1750 50  0001 L CNN
+	1    2450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 654DA679
+P 1650 1750
+F 0 "R3" V 1850 1700 50  0000 L CNN
+F 1 "1kΩ" V 1750 1677 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 1580 1750 50  0001 C CNN
+F 3 "~" H 1650 1750 50  0001 C CNN
+	1    1650 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1800 1750 2250 1750
+Wire Wire Line
+	2100 1050 2550 1050
+Wire Wire Line
+	2550 1050 2550 1550
+Connection ~ 2100 1050
+$Comp
+L Device:R R7
+U 1 1 65510D85
+P 3000 2050
+F 0 "R7" V 3200 2000 50  0000 L CNN
+F 1 "1kΩ" V 3100 1977 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 2930 2050 50  0001 C CNN
+F 3 "~" H 3000 2050 50  0001 C CNN
+	1    3000 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 1950 2550 2050
+Wire Wire Line
+	2550 2050 2750 2050
+Wire Wire Line
+	1800 2350 2350 2350
+Wire Wire Line
+	2550 1050 2650 1050
+Wire Wire Line
+	2650 1050 2650 2150
+Connection ~ 2550 1050
+Wire Wire Line
+	2650 2550 2750 2550
+Wire Wire Line
+	2750 2550 2750 2050
+Connection ~ 2750 2050
+Wire Wire Line
+	2750 2050 2850 2050
+Wire Wire Line
+	3450 2250 3450 2600
+Wire Wire Line
+	3450 2600 2100 2600
+Wire Wire Line
+	2100 2600 2100 2450
+Connection ~ 2100 2450
+Wire Wire Line
+	1250 750  3450 750 
+Wire Wire Line
+	3450 750  3450 1500
+Connection ~ 3450 1500
+Wire Wire Line
+	3450 1500 3450 1850
+Wire Wire Line
+	3750 1500 3800 1500
+Wire Wire Line
+	3800 1500 3800 2600
+Wire Wire Line
+	3800 2600 3450 2600
+Connection ~ 3450 2600
+Connection ~ 900  1950
+$EndSCHEMATC
